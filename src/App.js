@@ -1,4 +1,5 @@
-import ExpenseItem from "./components/ExpenseItem";
+import Expenses from "./components/Expenses";
+
 function App() {
     const dataList = [
         {
@@ -18,14 +19,7 @@ function App() {
     ];
     return (
         <div>
-            <ExpenseItem
-                date={dataList[0].date}
-                price={dataList[0].price}
-            ></ExpenseItem>
-            <ExpenseItem
-                date={dataList[1].date}
-                price={dataList[1].price}
-            ></ExpenseItem>
+            <Expenses items={dataList} />
         </div>
     );
 }
