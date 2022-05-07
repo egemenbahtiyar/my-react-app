@@ -1,27 +1,43 @@
-import Expenses from "./components/Expenses/Expenses";
+import React from 'react';
+
+import Expenses from './components/Expenses/Expenses';
 
 const App = () => {
-    const dataList = [
-        {
-            id: 1,
-            title: "Toilet paper",
-            amount: 2,
-            price: "$99",
-            date: new Date(2022, 7, 20),
-        },
-        {
-            id: 2,
-            title: "Book",
-            amount: 2,
-            price: "$20",
-            date: new Date(2022, 4, 25),
-        },
-    ];
-    return (
-        <div>
-            <Expenses items={dataList} />
-        </div>
-    );
-};
+  const expenses = [
+    {
+      id: 'e1',
+      title: 'Toilet Paper',
+      amount: 94.12,
+      date: new Date(2020, 7, 14),
+    },
+    { id: 'e2', title: 'New TV', amount: 799.49, date: new Date(2021, 2, 12) },
+    {
+      id: 'e3',
+      title: 'Car Insurance',
+      amount: 294.67,
+      date: new Date(2021, 2, 28),
+    },
+    {
+      id: 'e4',
+      title: 'New Desk (Wooden)',
+      amount: 450,
+      date: new Date(2021, 5, 12),
+    },
+  ];
+
+  // return React.createElement(
+  //   'div',
+  //   {},
+  //   React.createElement('h2', {}, "Let's get started!"),
+  //   React.createElement(Expenses, { items: expenses })
+  // );
+
+  return (
+    <div>
+      <h2>Let's get started!</h2>
+      <Expenses items={expenses} />
+    </div>
+  );
+}
 
 export default App;
